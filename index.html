@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+  //设置cookie的值
+  $("#setCookie").click(function(){
+	  alert("123");
+/*      $.cookie('the_cookie', 'the_value', { expires: 7 });
+      $("#cookieValue").text($.cookie('the_cookie')); */
+ 
+  });
+ 
+ 
+  //查看cookie的值
+  $("#lookCookie").click(function(){
+ 
+    $("#cookieValue").text($.cookie('the_cookie'));
+ 
+  });
+ 
+ 
+  //清除cookie的值
+  $("#clearCookie").click(function(){
+ 
+    $.cookie('the_cookie',null);
+ 
+  });
+ 
+
+</script>
+	</head>
+	<body>
+
+  <button id="setCookie" >设置cookie</button>
+  <button id="lookCookie" >获取cookie值</button>
+  <button id="clearCookie" >清除cookie</button>
+  <div><span>cookie的值:</span><span id="cookieValue"></span></div>
+	</body>
+</html>
